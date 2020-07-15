@@ -9,18 +9,8 @@ class UIData {
   static const String profileOneRoute = "/View Profile";
   static const String profileTwoRoute = "/Profile 2";
   static const String notFoundRoute = "/No Search Result";
-  static const String timelineOneRoute = "/Feed";
-  static const String timelineTwoRoute = "/Tweets";
-  static const String settingsOneRoute = "/Device Settings";
-  static const String shoppingOneRoute = "/Shopping List";
-  static const String shoppingTwoRoute = "/Shopping Details";
-  static const String shoppingThreeRoute = "/Product Details";
-  static const String paymentOneRoute = "/Credit Card";
-  static const String paymentTwoRoute = "/Payment Success";
-  static const String loginOneRoute = "/Login With OTP";
-  static const String loginTwoRoute = "/Login 2";
-  static const String dashboardOneRoute = "/Dashboard 1";
-  static const String dashboardTwoRoute = "/Dashboard 2";
+  static const String alertDialogDemo = "/alertDialogDemo";
+
 
   //strings
   static const String appName = "Flutter UIKit";

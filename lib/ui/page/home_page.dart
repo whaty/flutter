@@ -3,7 +3,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_two/logic/bloc/menu_bloc.dart';
 import 'package:flutter_two/model/menu.dart';
-import 'package:flutter_two/ui/widgets/about_tile.dart';
 import 'package:flutter_two/ui/widgets/profile_tile.dart';
 import 'package:flutter_two/utils/uidata.dart';
 
@@ -11,6 +10,7 @@ class HomePage extends StatelessWidget {
   final _scaffoldState = GlobalKey<ScaffoldState>();
   Size deviceSize;
   BuildContext _context;
+
   //menuStack
   Widget menuStack(BuildContext context, Menu menu) => InkWell(
         onTap: () => _showModalBottomSheet(context, menu),
@@ -157,41 +157,48 @@ class HomePage extends StatelessWidget {
       );
 
   void _showModalBottomSheet(BuildContext context, Menu menu) {
-    showModalBottomSheet(
-        context: context,
-        builder: (context) => Material(
-            clipBehavior: Clip.antiAlias,
-            color: Colors.white,
-            shape: RoundedRectangleBorder(
-                borderRadius: new BorderRadius.only(
-                    topLeft: new Radius.circular(15.0),
-                    topRight: new Radius.circular(15.0))),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              mainAxisSize: MainAxisSize.max,
-              children: <Widget>[
-                header(),
-                Expanded(
-                  child: ListView.builder(
-                    shrinkWrap: false,
-                    itemCount: menu.items.length,
-                    itemBuilder: (context, i) => Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                          child: ListTile(
-                              title: Text(
-                                menu.items[i],
-                              ),
-                              onTap: () {
-                                Navigator.pop(context);
-                                Navigator.pushNamed(
-                                    context, "/${menu.items[i]}");
-                              }),
-                        ),
-                  ),
-                ),
-                MyAboutTile()
-              ],
-            )));
+    debugPrint(menu.nav);
+    Navigator.pushNamed(
+      context,
+      '/${menu.nav}',
+      arguments: menu,
+    );
+
+//    showModalBottomSheet(
+//        context: context,
+//        builder: (context) => Material(
+//            clipBehavior: Clip.antiAlias,
+//            color: Colors.white,
+//            shape: RoundedRectangleBorder(
+//                borderRadius: new BorderRadius.only(
+//                    topLeft: new Radius.circular(15.0),
+//                    topRight: new Radius.circular(15.0))),
+//            child: Column(
+//              mainAxisAlignment: MainAxisAlignment.spaceAround,
+//              mainAxisSize: MainAxisSize.max,
+//              children: <Widget>[
+//                header(),
+//                Expanded(
+//                  child: ListView.builder(
+//                    shrinkWrap: false,
+//                    itemCount: menu.items.length,
+//                    itemBuilder: (context, i) => Padding(
+//                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+//                          child: ListTile(
+//                              title: Text(
+//                                menu.items[i],
+//                              ),
+//                              onTap: () {
+//                                Navigator.pop(context);
+//                                Navigator.pushNamed(
+//                                    context, "/${menu.items[i]}");
+//                              }),
+//                        ),
+//                  ),
+//                ),
+//                MyAboutTile()
+//              ],
+//            )));
   }
 
   Widget iosCardBottom(Menu menu, BuildContext context) => Padding(
