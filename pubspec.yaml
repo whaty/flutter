@@ -33,6 +33,9 @@ dependencies:
   http: ^0.12.0+1
   rxdart: ^0.21.0
   flutter_masked_text: ^0.8.0
+  share: ^0.6.1+1
+  url_launcher: ^5.1.3
+  sharesdk_plugin:
   flutter_localizations:
     sdk: flutter
 
@@ -88,3 +91,7 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+      - family: Alibaba
+        fonts:
+          - asset: assets/fonts/alibaba.ttf

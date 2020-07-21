@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_two/model/menu.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 abstract class BasePage extends StatefulWidget {
   BasePage({Key key}) : super(key: key);
@@ -15,6 +16,15 @@ abstract class BaseState<Page extends BasePage> extends State<Page> {
 mixin BasicPage<Page extends BasePage> on BaseState<Page> {
   @override
   Widget build(BuildContext context) {
+    void _launchURL(outUrl) async {
+      if (await canLaunch(outUrl)) {
+        // 判断当前手机是否安装某app. 能否正常跳转
+        await launch(outUrl);
+      } else {
+        throw 'Could not launch $outUrl';
+      }
+    }
+
     Menu menu = ModalRoute.of(context).settings.arguments;
     return new Scaffold(
       appBar: new AppBar(
@@ -50,9 +60,13 @@ mixin BasicPage<Page extends BasePage> on BaseState<Page> {
           Expanded(
               child: Container(
             alignment: Alignment.centerLeft,
-            child: Text(
-              '相关链接：${menu.relativeUrls}',
-              style: TextStyle(fontSize: 15.0),
+            child: FlatButton(
+              textColor: Color(0xFF0D47A1),
+              child: Text(
+                '相关链接：${menu.relativeUrls}',
+                style: TextStyle(fontSize: 15.0),
+              ),
+              onPressed: () => {_launchURL(menu.relativeUrls[0])},
             ),
           )),
         ],

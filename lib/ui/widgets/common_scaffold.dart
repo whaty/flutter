@@ -15,6 +15,7 @@ class CommonScaffold extends StatelessWidget {
   final floatingIcon;
   final centerDocked;
   final elevation;
+  final qrCallback;
 
   CommonScaffold(
       {this.appTitle,
@@ -27,7 +28,8 @@ class CommonScaffold extends StatelessWidget {
       this.showBottomNav = false,
       this.centerDocked = false,
       this.floatingIcon,
-      this.elevation = 4.0});
+      this.elevation = 4.0,
+      this.qrCallback});
 
   Widget myBottomBar() => BottomAppBar(
         clipBehavior: Clip.antiAlias,
@@ -116,7 +118,7 @@ class CommonScaffold extends StatelessWidget {
                     )
                   : null,
               icon: floatingIcon,
-              qrCallback: () {},
+              qrCallback: qrCallback,
             )
           : null,
       floatingActionButtonLocation: centerDocked

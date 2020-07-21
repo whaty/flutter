@@ -23,6 +23,7 @@ if (flutterVersionName == null) {
 
 apply plugin: 'com.android.application'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+apply plugin: 'com.mob.sdk'
 
 android {
     compileSdkVersion 28
@@ -51,4 +52,226 @@ android {
 
 flutter {
     source '../..'
+}
+
+MobSDK {
+    appKey "302670585d902"
+    appSecret "9985b1a463fdc1d14e27fe59eadfb50c"
+    ShareSDK {
+        loopShare true
+        devInfo {
+            SinaWeibo {
+                appKey "568898243"
+                appSecret "38a4f8204cc784f81f9f0daaf31e02e3"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            Wechat {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+                userName "gh_afb25ac019c9"
+                path "pages/index/index.html?id=1"
+                withShareTicket true
+                miniprogramType 2
+            }
+            QQ {
+                appId "100371282"
+                appKey "aed9b0303e3ed1e27bae87c33761161d"
+            }
+            Facebook {
+                appKey "1412473428822331"
+                appSecret "a42f4f3f867dc947b9ed6020c2e93558"
+                callbackUri "https://mob.com"
+            }
+            Twitter {
+                appKey "LRBM0H75rWrU9gNHvlEAA2aOy"
+                appSecret "gbeWsZvA9ELJSdoBzJ5oLKX0TU09UOwrzdGfo9Tg7DjyGuMe8G"
+                callbackUri "http://mob.com"
+            }
+            ShortMessage {}
+            LinkedIn {
+                appKey "ejo5ibkye3vo"
+                appSecret "cC7B2jpxITqPLZ5M"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            Douyin {
+                appKey "aw9ivykfjvi4hpwo"
+                appSecret "42b4caa6bda60bd49f05f06d0a4956e1"
+            }
+            FacebookMessenger {
+                appId "107704292745179"
+            }
+            WhatsApp {}
+            Wework {
+                appKey "wwa21eaecf93f0e3ba"
+                appSecret "dW7e27P7Hc8NiYdRxnbTeOLgfI1ugR72e-PM8uusq2s"
+                agentId "1000012"
+                schema "wwautha21eaecf93f0e3ba000012"
+            }
+            YouDao {
+                hostType "product"
+                appKey "dcde25dca105bcc36884ed4534dab940"
+                appSecret "d98217b4020e7f1874263795f44838fe"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            KaiXin {
+                appKey "358443394194887cee81ff5890870c7c"
+                appSecret "da32179d859c016169f66d90b6db2a23"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            Renren {
+                appId "226427"
+                appKey "fc5b8aed373c4c27a05b712acba0f8c3"
+                appSecret "f29df781abdd4f49beca5a2194676ca4"
+            }
+            Email {}
+            Evernote {
+                hostType "sandbox"
+                appKey "sharesdk-7807"
+                appSecret "d05bf86993836004"
+            }
+            TencentWeibo {
+                appKey "801307650"
+                appSecret "ae36f4ee3946e1cbb98d6965b0b2ff5c"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            GooglePlus {
+                appId "236300675100-am5pm8km7md1memjevq8rl9pg5c4s4b8.apps.googleusercontent.com"
+                callbackUri "http://localhost"
+            }
+            Instagram {
+                appId "ff68e3216b4f4f989121aa1c2962d058"
+                appSecret "1b2e82f110264869b3505c3fe34e31a1"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            Instapaper {
+                appKey "4rDJORmcOcSAZL1YpqGHRI605xUvrLbOhkJ07yO0wWrYrc61FA"
+                appSecret "GNr1GespOQbrm8nvd7rlUsyRQsIo3boIbMguAl9gfpdL0aKZWe"
+            }
+            VKontakte {
+                appId "3921561"
+            }
+            Dropbox {
+                appKey "i5vw2mex1zcgjcj"
+                appSecret "3i9xifsgb4omr0s"
+                callbackUri "https://www.sharesdk.cn"
+            }
+            Flickr {
+                appKey "33d833ee6b6fca49943363282dd313dd"
+                appSecret "3a2c5b42a8fbb8bb"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            Pinterest {
+                appId "1432928"
+            }
+            FourSquare {
+                appId "G0ZI20FM30SJAJTX2RIBGD05QV1NE2KVIM2SPXML2XUJNXEU"
+                appSecret "3XHQNSMMHIFBYOLWEPONNV4DOTCDBQH0AEMVGCBG0MZ32XNU"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            Yixin {
+                appId "yx0d9a9f9088ea44d78680f3274da1765f"
+            }
+            Mingdao {
+                appKey "EEEE9578D1D431D3215D8C21BF5357E3"
+                appSecret "5EDE59F37B3EFA8F65EEFB9976A4E933"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            KakaoTalk {
+                appKey "48d3f524e4a636b08d81b3ceb50f1003"
+            }
+            Line {
+                appId "1477692153"
+                appSecret "f30c036370f2e04ade71c52eef73a9af"
+            }
+            Pocket {
+                appKey "32741-389c565043c49947ba7edf05"
+            }
+            Telegram {
+                appId "300011860247"
+                appKey "2D464D8BFCE73A44B4F9DF95A2FDBE1C"
+            }
+            Tumblr {
+                appKey "2QUXqO9fcgGdtGG1FcvML6ZunIQzAEL8xY6hIaxdJnDti2DYwM"
+                appSecret "3Rt0sPFj7u2g39mEVB3IBpOzKnM3JnTtxX2bao2JKk4VV1gtNo"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            Meipai {
+                appId "1089867596"
+                appSecret "y9ym6rrjjijtkt23qtsc"
+            }
+            Youtube {
+                appId "370141748022-bicrnsjfiije93bvdt63dh3728m4shas.apps.googleusercontent.com"
+                appSecret "AIzaSyAO06g-0TDpHcsXXO918a7QE3Zdct2bB5E"
+                callbackUri "http://localhost"
+            }
+            Accountkit {
+                appKey "579465512480462"
+                appSecret "8a6383652dd9f23fb0994f03d350d0ca"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            Douban {
+                appKey "031a96a3aa8b28af094fc3eaffa17a0d"
+                appSecret "2e675e730571b75d"
+                callbackUri "http://mob.com"
+            }
+            SnapChat {
+                clientID "dc8e6068-0578-41b8-8392-4da009519725"
+                callbackURL "ssdkmoba0b0c0d0://mob"
+            }
+            Cmcc {
+                appId "300011860247"
+                appKey "2D464D8BFCE73A44B4F9DF95A2FDBE1C"
+            }
+            Oasis {
+                appKey "568898243"
+                appSecret "38a4f8204cc784f81f9f0daaf31e02e3"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            XMAccount {
+                appId "2882303761518333605"
+                callbackUri "http://www.mob.com"
+            }
+            Dingding {
+                appId "dingoanxyrpiscaovl4qlw"
+                appSecret "7Cbf-b8zeqxj3hs0WqEgsv_Y7eQ80ubm8qPmW694MMMybjJJqrUsADoICm8W3sbN"
+                callbackUri "https://www.mob.com/sharesdk/dingding"
+            }
+            Telecom {
+                appKey "8148612606"
+                appSecret "mCltrhUqwshFa86egDTs0491ibaAulKA"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            Alipay {
+                appId "2015072400185895"
+            }
+            Reddit {
+                appKey "MExDxPuTCtFiRw"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            HWAccount {
+                appId "101353159"
+            }
+            WechatMoments {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+            }
+            WechatFavorite {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+            }
+            QZone {
+                appId "100371282"
+                appKey "aed9b0303e3ed1e27bae87c33761161d"
+            }
+            KakaoStory {
+                appKey "48d3f524e4a636b08d81b3ceb50f1003"
+            }
+            AlipayMoments {
+                appId "2015072400185895"
+            }
+            YixinMoments {
+                appId "yx0d9a9f9088ea44d78680f3274da1765f"
+            }
+        }
+    }
 }

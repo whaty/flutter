@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_two/myapp.dart';
 import 'package:flutter_two/ui/page/flutter/widget/bottom_navigation/circular_bottom_navigation.dart';
 import 'package:flutter_two/ui/page/flutter/widget/bottom_navigation/tab_item.dart';
+import 'package:flutter_two/ui/page/profile/profile_one_page.dart';
 
 class BottomNavigation extends StatelessWidget {
   @override
@@ -36,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
       Icons.person,
       "关于",
       Colors.cyan,
-      new MyApp(),
+      new ProfileOnePage(),
     ),
   ]);
 
