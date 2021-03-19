@@ -19,12 +19,13 @@ class _RaisedButtonDemoState extends BaseState<RaisedButtonDemo>
       children: <Widget>[
         const RaisedButton(
           onPressed: null,
-          child: Text('Disabled Button', style: TextStyle(fontSize: 20)),
+          child: Text('Disabled Button 已标志为弃用', style: TextStyle(fontSize: 20)),
         ),
         const SizedBox(height: 30),
         RaisedButton(
           onPressed: () {},
-          child: const Text('Enabled Button', style: TextStyle(fontSize: 20)),
+          child: const Text('Enabled Button 改用ElevatedButton',
+              style: TextStyle(fontSize: 20)),
         ),
         const SizedBox(height: 30),
         RaisedButton(

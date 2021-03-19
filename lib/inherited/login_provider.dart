@@ -8,7 +8,7 @@ class LoginProvider extends InheritedWidget {
       : super(child: child);
 
   static LoginProvider of(BuildContext context) =>
-      context.inheritFromWidgetOfExactType(LoginProvider);
+      context.dependOnInheritedWidgetOfExactType(aspect: LoginProvider);
 
   @override
   bool updateShouldNotify(LoginProvider oldWidget) =>

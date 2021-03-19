@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+
 import 'package:flutter_two/services/network_service_response.dart';
 import 'package:http/http.dart' as http;
 
@@ -11,15 +12,15 @@ class RestClient {
 
   Future<MappedNetworkServiceResponse<T>> getAsync<T>(
       String resourcePath) async {
-    var response = await http.get(resourcePath);
+    var response = await http.get(Uri.parse(resourcePath));
     return processResponse<T>(response);
   }
 
   Future<MappedNetworkServiceResponse<T>> postAsync<T>(
       String resourcePath, dynamic data) async {
     var content = json.encoder.convert(data);
-    var response =
-        await http.post(resourcePath, body: content, headers: headers);
+    var response = await http.post(Uri.parse(resourcePath),
+        body: content, headers: headers);
     return processResponse<T>(response);
   }
 

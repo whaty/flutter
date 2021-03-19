@@ -62,12 +62,12 @@ class CreditCardPage extends StatelessWidget {
                   stream: cardBloc.nameOutputStream,
                   initialData: "Your Name",
                   builder: (context, snapshot) => Text(
-                        snapshot.data.length > 0 ? snapshot.data : "Your Name",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: UIData.ralewayFont,
-                            fontSize: 20.0),
-                      ),
+                    snapshot.data.length > 0 ? snapshot.data : "Your Name",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: UIData.ralewayFont,
+                        fontSize: 20.0),
+                  ),
                 ),
               ),
             ],
@@ -214,7 +214,7 @@ class CreditCardPage extends StatelessWidget {
     _context = context;
     cardBloc = CreditCardBloc();
     return Scaffold(
-      resizeToAvoidBottomPadding: true,
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
         centerTitle: false,
         title: Text("Credit Card"),
