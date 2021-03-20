@@ -18,7 +18,7 @@ class _FlatButtonDemoState extends BaseState<FlatButtonDemo> with BasicPage {
         /*...*/
       },
       child: Text(
-        "Flat Button",
+        "Flat Button 已标志为弃用，请改用TextButton",
       ),
     );
   }

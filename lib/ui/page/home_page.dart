@@ -79,7 +79,6 @@ class HomePage extends StatelessWidget {
           title: Row(
             children: <Widget>[
               FlutterLogo(
-                colors: Colors.yellow,
                 textColor: Colors.white,
               ),
               SizedBox(
@@ -328,7 +327,7 @@ class HomePage extends StatelessWidget {
                         backgroundColor: CupertinoColors.black,
                         child: FlutterLogo(
                           size: 15.0,
-                          colors: Colors.yellow,
+                          textColor: Colors.yellow,
                         ),
                       ),
                     )
